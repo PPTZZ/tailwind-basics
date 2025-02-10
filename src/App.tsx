@@ -1,10 +1,16 @@
-import './tailwind.css'
+import { Outlet } from 'react-router';
+import './tailwind.css';
+import { Link } from 'react-router';
 function App() {
-  return (
-    <>
-    <h1 className="text-3xl font-bold underline">Hello world!  </h1>
-    </>
-  )
+	return (
+		<>
+			<div>
+				<Link to={'/'}>Home</Link>
+				<Link to={'/typography'}>Typography</Link>
+				<Outlet />
+			</div>
+		</>
+	);
 }
 
-export default App
+export default App;
